@@ -115,6 +115,7 @@ public class Hospital {
                                 }
                             }
                             int edit = key.nextInt();
+                            System.out.println(edit);
                             for (Appointment a : appointments) {
                                 if ((appointments.indexOf(a) + 1) == edit ) {
                                     System.out.println("What would you like to edit?");
@@ -130,8 +131,10 @@ public class Hospital {
                                     if (Integer.parseInt(newTime) > 0) {
                                         a.time = newTime;
                                         System.out.println("Time has been updated to: " + a.time);
+                                        editing = false;
                                     } else {
                                         System.out.println("Invalid time input. time unchanged");
+                                        editing = false;
                                     }
                                 }
                             }
